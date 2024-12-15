@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+<style>     
+#contact {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #3a3a3a;
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+label {
+    font-size: 16px;
+    color: #5f6368;
+    margin-bottom: 8px;
+    display: block;
+    font-weight: 500;
+}
+
+input[type="text"], input[type="email"], textarea, select {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, textarea:focus, select:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.3);
+    outline: none;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+.radio-group label {
+    display: inline-block;
+    margin-right: 20px;
+    color: #5f6368;
+    font-size: 16px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 14px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+input[type="submit"]:active {
+    background-color: #3e8e41;
+    transform: translateY(0);
+}
+
+textarea {
+    resize: vertical;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+select {
+    cursor: pointer;
+}
+
+input[type="text"]:hover, input[type="email"]:hover, textarea:hover, select:hover {
+    border-color: #4CAF50;
+}
+
+.form-group:hover label {
+    color: #4CAF50;
+}
+</style>
+</head>
+<body>
+    <section id="contact">
+        <h2>Get in Touch</h2>
+        <form action="#">
+            <div class="form-group">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+    
+            <div class="form-group">
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+    
+            <div class="form-group">
+                <label for="message">Your Feedback:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+    
+            <div class="form-group radio-group">
+                <label for="contactMethod">Preferred Contact Method:</label><br>
+                <input type="radio" id="contactEmail" name="contactMethod" value="Email" required>
+                <label for="contactEmail">Email</label>
+                <input type="radio" id="contactPhone" name="contactMethod" value="Phone" required>
+                <label for="contactPhone">Phone</label>
+            </div>
+    
+            <div class="form-group">
+                <label for="inquiryType">Nature of Inquiry:</label>
+                <select id="inquiryType" name="inquiryType">
+                    <option value="general">General Inquiry</option>
+                    <option value="energy">Energy Solutions</option>
+                    <option value="sustainability">Sustainability Tips</option>
+                </select>
+            </div>
+    
+            <div class="form-group">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </section>
+</body>
+</html>

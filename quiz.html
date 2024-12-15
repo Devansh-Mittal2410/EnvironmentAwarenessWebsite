@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <style>
+        #quiz{
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .quiz-item button {
+            display: inline-block;
+            margin: 10px 5px;
+            padding: 10px 15px;
+            background: #2c6e49;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .quiz-item button:hover {
+            background: #88c9bf;
+        }
+
+        .quiz-item button.correct {
+            background: #4CAF50; /* Green for correct */
+        }
+
+        .quiz-item button.wrong {
+            background: #F44336; /* Red for wrong */
+        }
+
+        #finish-quiz {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #e80b0b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        #finish-quiz:hover {
+            background: #d3a612;
+        }
+
+        .quiz {
+            display: inline-block;
+            margin: 10px 5px;
+            padding: 10px 15px;
+            background: #1155d2;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        
+        .quiz:hover{
+            background: #100d6b;
+        }
+</style>
+</head>
+<body>
+    
+    <!-- Quiz -->
+    <section id="quiz" class="section">
+        <div class="container">
+            <h2>Interactive Quiz</h2>
+            <p>Test your knowledge about environmental issues:</p>
+            
+            <div class="quiz-item">
+                <p>1. What percentage of Earth's water is drinkable?</p>
+                <button onclick="checkAnswer(this, 'wrong')">70%</button>
+                <button onclick="checkAnswer(this, 'correct')">1%</button>
+                <button onclick="checkAnswer(this, 'wrong')">30%</button>
+            </div>
+            
+            <div class="quiz-item">
+                <p>2. Which gas is primarily responsible for global warming?</p>
+                <button onclick="checkAnswer(this, 'correct')">Carbon Dioxide</button>
+                <button onclick="checkAnswer(this, 'wrong')">Oxygen</button>
+                <button onclick="checkAnswer(this, 'wrong')">Nitrogen</button>
+            </div>
+            
+            <div class="quiz-item">
+                <p>3. How long does plastic take to decompose?</p>
+                <button onclick="checkAnswer(this, 'correct')">Up to 1000 years</button>
+                <button onclick="checkAnswer(this, 'wrong')">50 years</button>
+                <button onclick="checkAnswer(this, 'wrong')">10 years</button>
+            </div>
+            
+            <div class="quiz-item">
+                <p>4. Which renewable energy source is the most used worldwide?</p>
+                <button onclick="checkAnswer(this, 'wrong')">Solar Energy</button>
+                <button onclick="checkAnswer(this, 'wrong')">Wind Energy</button>
+                <button onclick="checkAnswer(this, 'correct')">Hydropower</button>
+            </div>
+            
+            <div class="quiz-item">
+                <p>5. What is the primary cause of deforestation?</p>
+                <button onclick="checkAnswer(this, 'correct')">Agricultural Expansion</button>
+                <button onclick="checkAnswer(this, 'wrong')">Urban Development</button>
+                <button onclick="checkAnswer(this, 'wrong')">Timber Harvesting</button>
+            </div>
+            
+            <button id="finish-quiz" onclick="finishQuiz()">Finish Quiz</button>
+
+            <p>Test your knowledge with some more questions</p>
+            <a href="https://forms.gle/3hHaNnTL4mYYyZoy8" class="quiz"  target="_blank">Visit This</a>
+    
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
